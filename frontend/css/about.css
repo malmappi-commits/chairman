@@ -1,0 +1,191 @@
+/* =========================
+   ABOUT PAGE INTRODUCTION
+========================= */
+
+.about-hero {
+  background: var(--light);
+  padding: 100px 8%;
+  text-align: center;
+}
+
+.about-hero-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.about-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 15px 0;
+  color: var(--primary-dark);
+}
+
+.about-hero p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   BIOGRAPHY
+========================= */
+
+.section-padding {
+  padding: 90px 8%;
+}
+
+.about-biography {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+}
+
+.about-biography-content h2,
+.vision-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--primary-dark);
+  margin: 15px 0 25px;
+}
+
+.about-biography-content p,
+.vision-content p {
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.section-label {
+  color: var(--secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   EDUCATION & CAREER
+========================= */
+
+.about-background {
+  background: var(--light);
+}
+
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.background-card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.background-icon {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.background-card h3 {
+  color: var(--primary-dark);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.background-card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* =========================
+   VISION
+========================= */
+
+.about-vision {
+  background: var(--primary-dark);
+  color: var(--white);
+  text-align: center;
+}
+
+.vision-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.vision-content h2 {
+  color: var(--white);
+}
+
+.vision-content p {
+  color: #d0dbe4;
+}
+
+.vision-content blockquote {
+  border-left: 3px solid var(--secondary);
+  padding: 15px 25px;
+  margin: 35px auto;
+  max-width: 650px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--white);
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+  .about-biography {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image img {
+    height: 450px;
+  }
+
+  .background-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 75px 6%;
+  }
+
+  .section-padding {
+    padding: 65px 6%;
+  }
+
+  .about-image img {
+    height: 380px;
+  }
+
+  .background-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .background-card {
+    padding: 28px;
+  }
+
+  .vision-content blockquote {
+    font-size: 1.15rem;
+  }
+}
