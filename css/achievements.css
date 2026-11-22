@@ -1,0 +1,147 @@
+/* ACHIEVEMENTS HERO */
+
+.achievements-hero {
+  background: var(--primary);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.achievements-hero .eyebrow {
+  color: var(--secondary);
+}
+
+.achievements-hero h1 {
+  color: var(--white);
+  font-size: clamp(32px, 5vw, 52px);
+  margin: 15px 0;
+}
+
+.achievements-hero p {
+  color: #dce5ec;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* INTRODUCTION */
+
+.achievements-intro {
+  padding-bottom: 30px;
+}
+
+/* ACHIEVEMENT CARDS */
+
+.achievement-list {
+  background: var(--light);
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.achievement-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-image {
+  height: 260px;
+  overflow: hidden;
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.achievement-card:hover img {
+  transform: scale(1.05);
+}
+
+.achievement-content {
+  padding: 25px;
+}
+
+.achievement-category {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.achievement-content h3 {
+  color: var(--primary);
+  font-size: 21px;
+  margin: 12px 0;
+}
+
+.achievement-content p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* FUTURE VISION */
+
+.achievement-vision {
+  background: var(--white);
+}
+
+.vision-box {
+  background: var(--primary);
+  padding: 60px 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.vision-box .eyebrow {
+  color: var(--secondary);
+}
+
+.vision-box h2 {
+  color: var(--white);
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.vision-box p {
+  color: #dce5ec;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 700px) {
+  .achievements-hero {
+    padding: 75px 0;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-image {
+    height: 230px;
+  }
+
+  .vision-box {
+    padding: 45px 20px;
+  }
+}
