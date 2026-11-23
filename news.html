@@ -97,16 +97,24 @@
           </div>
 
           <div class="news-filters">
-            <button class="news-filter active">All</button>
-            <button class="news-filter">Announcements</button>
-            <button class="news-filter">Press Releases</button>
-            <button class="news-filter">Activities</button>
-            <button class="news-filter">Public Notices</button>
+            <button class="news-filter active" data-category="all">All</button>
+            <button class="news-filter" data-category="announcements">
+              Announcements
+            </button>
+            <button class="news-filter" data-category="press-releases">
+              Press Releases
+            </button>
+            <button class="news-filter" data-category="activities">
+              Activities
+            </button>
+            <button class="news-filter" data-category="public-notices">
+              Public Notices
+            </button>
           </div>
 
           <div class="news-grid">
             <!-- NEWS CARD 1 -->
-            <article class="news-card">
+            <article class="news-card" data-category="announcements">
               <div class="news-card-image">
                 <img
                   src="images/news-1.jpg"
@@ -132,7 +140,7 @@
             </article>
 
             <!-- NEWS CARD 2 -->
-            <article class="news-card">
+            <article class="news-card" data-category="activities">
               <div class="news-card-image">
                 <img
                   src="images/news-2.jpg"
@@ -159,7 +167,7 @@
             </article>
 
             <!-- NEWS CARD 3 -->
-            <article class="news-card">
+            <article class="news-card" data-category="press-releases">
               <div class="news-card-image">
                 <img src="images/news-3.jpg" alt="Official press briefing" />
               </div>
@@ -183,7 +191,33 @@
             </article>
 
             <!-- NEWS CARD 4 -->
-            <article class="news-card">
+            <article class="news-card" data-category="activities">
+              <div class="news-card-image">
+                <img
+                  src="images/news-2.jpg"
+                  alt="Community development activity"
+                />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Activities</span>
+
+                <h3>Community Development and Engagement</h3>
+
+                <p>
+                  Updates on engagements and activities across the local
+                  government.
+                </p>
+
+                <div class="news-meta">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+
+            <article class="news-card" data-category="public-notices">
               <div class="news-card-image">
                 <img src="images/news-4.jpg" alt="Public community programme" />
               </div>
@@ -198,6 +232,193 @@
                   community.
                 </p>
 
+                <div class="news-meta" data-category="announcements">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+            <!-- NEWS CARD 5 -->
+            <article class="news-card" data-category="public-notices">
+              <div class="news-card-image">
+                <img src="images/news-4.jpg" alt="Public community programme" />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Public Notices</span>
+
+                <h3>Important Notice To Residents</h3>
+
+                <p>
+                  Public information and important notices for members of the
+                  community.
+                </p>
+
+                <div class="news-meta" data-category="announcements">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+            <!-- NEWS CARD 6 -->
+            <article class="news-card" data-category="activities">
+              <div class="news-card-image">
+                <img
+                  src="images/news-2.jpg"
+                  alt="Community development activity"
+                />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Activities</span>
+
+                <h3>Community Development and Engagement</h3>
+
+                <p>
+                  Updates on engagements and activities across the local
+                  government.
+                </p>
+
+                <div class="news-meta">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+            <!-- NEWS CARD 7 -->
+            <article class="news-card" data-category="press-releases">
+              <div class="news-card-image">
+                <img src="images/news-3.jpg" alt="Official press briefing" />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Press Releases</span>
+
+                <h3>Statement From The Chairman's Office</h3>
+
+                <p>
+                  Official statements and communications concerning the local
+                  government.
+                </p>
+
+                <div class="news-meta">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+            <!-- NEWS CARD 8 -->
+            <article class="news-card" data-category="public-notices">
+              <div class="news-card-image">
+                <img src="images/news-4.jpg" alt="Public community programme" />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Public Notices</span>
+
+                <h3>Important Notice To Residents</h3>
+
+                <p>
+                  Public information and important notices for members of the
+                  community.
+                </p>
+
+                <div class="news-meta" data-category="announcements">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+            <!-- NEWS CARD 9 -->
+            <article class="news-card" data-category="public-notices">
+              <div class="news-card-image">
+                <img src="images/news-4.jpg" alt="Public community programme" />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Public Notices</span>
+
+                <h3>Important Notice To Residents</h3>
+
+                <p>
+                  Public information and important notices for members of the
+                  community.
+                </p>
+
+                <div class="news-meta" data-category="announcements">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+            <!-- NEWS CARD 10 -->
+            <article class="news-card" data-category="press-releases">
+              <div class="news-card-image">
+                <img src="images/news-3.jpg" alt="Official press briefing" />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Press Releases</span>
+
+                <h3>Statement From The Chairman's Office</h3>
+
+                <p>
+                  Official statements and communications concerning the local
+                  government.
+                </p>
+
+                <div class="news-meta">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+            <!-- NEWS CARD 11 -->
+            <article class="news-card" data-category="public-notices">
+              <div class="news-card-image">
+                <img src="images/news-4.jpg" alt="Public community programme" />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Public Notices</span>
+
+                <h3>Important Notice To Residents</h3>
+
+                <p>
+                  Public information and important notices for members of the
+                  community.
+                </p>
+
+                <div class="news-meta" data-category="announcements">
+                  <span>November 2026</span>
+                </div>
+
+                <a href="#" class="news-read-more"> Read Article → </a>
+              </div>
+            </article>
+            <!-- NEWS CARD 12 -->
+            <article class="news-card" data-category="press-releases">
+              <div class="news-card-image">
+                <img src="images/news-3.jpg" alt="Official press briefing" />
+              </div>
+
+              <div class="news-card-content">
+                <span class="news-category">Press Releases</span>
+
+                <h3>Statement From The Chairman's Office</h3>
+
+                <p>
+                  Official statements and communications concerning the local
+                  government.
+                </p>
+
                 <div class="news-meta">
                   <span>November 2026</span>
                 </div>
@@ -209,7 +430,7 @@
 
           <!-- PAGINATION -->
           <div class="news-pagination">
-            <button disabled>Previous</button>
+            <button>Previous</button>
             <button class="current-page">1</button>
             <button>2</button>
             <button>3</button>
@@ -278,5 +499,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/news.js" type="module"></script>
   </body>
 </html>

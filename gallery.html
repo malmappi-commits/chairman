@@ -69,16 +69,26 @@
       <section class="gallery-section section">
         <div class="section-container">
           <div class="gallery-filters">
-            <button class="gallery-filter active">All</button>
-            <button class="gallery-filter">Events</button>
-            <button class="gallery-filter">Projects</button>
-            <button class="gallery-filter">Meetings</button>
-            <button class="gallery-filter">Community</button>
+            <button class="gallery-filter active" data-category="all">
+              All
+            </button>
+            <button class="gallery-filter" data-category="events">
+              Events
+            </button>
+            <button class="gallery-filter" data-category="projects">
+              Projects
+            </button>
+            <button class="gallery-filter" data-category="meetings">
+              Meetings
+            </button>
+            <button class="gallery-filter" data-category="community">
+              Community
+            </button>
           </div>
 
           <!-- GALLERY GRID -->
           <div class="gallery-grid">
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="events">
               <img src="images/gallery-1.jpg" alt="Official community event" />
               <div class="gallery-overlay">
                 <span>Official Events</span>
@@ -86,7 +96,7 @@
               </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="projects">
               <img
                 src="images/gallery-2.jpg"
                 alt="Community development project"
@@ -97,7 +107,7 @@
               </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="meetings">
               <img
                 src="images/gallery-3.jpg"
                 alt="Official stakeholder meeting"
@@ -108,7 +118,7 @@
               </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="community">
               <img
                 src="images/gallery-4.jpg"
                 alt="Community outreach activity"
@@ -119,7 +129,7 @@
               </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="events">
               <img src="images/gallery-5.jpg" alt="Official ceremony" />
               <div class="gallery-overlay">
                 <span>Official Events</span>
@@ -127,7 +137,7 @@
               </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="projects">
               <img
                 src="images/gallery-6.jpg"
                 alt="Public development activity"
@@ -206,5 +216,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/gallery.js" type="module"></script>
   </body>
 </html>
