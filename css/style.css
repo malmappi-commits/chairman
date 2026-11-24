@@ -57,117 +57,289 @@
 /* OFFICE STRUCTURE */
 
 .office-section {
-  padding: 90px 0;
-  background: var(--light);
+  padding: 90px 20px;
+  background: #f5f6f8;
 }
 
 .office-tree {
-  max-width: 1000px;
-  margin: 60px auto 0;
+  max-width: 1150px;
+  margin: 65px auto 0;
+}
+
+/* Chairman */
+
+.chairman-level {
+  display: flex;
+  justify-content: center;
+}
+
+.office-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px 18px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 5px 20px rgba(16, 43, 70, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.office-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(16, 43, 70, 0.12);
+}
+
+.chairman-card {
+  width: 280px;
+  background: #102b46;
+  border-color: #102b46;
+  color: #fff;
+}
+
+.office-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #c9a44c;
+}
+
+.office-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.office-role {
+  display: block;
+  color: #b18b39;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+.chairman-card .office-role {
+  color: #e4c77e;
+}
+
+.office-card h3 {
+  color: #102b46;
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.chairman-card h3 {
+  color: #fff;
+}
+
+.office-card p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.chairman-card p {
+  color: #dce3eb;
+}
+
+/* Main connector */
+
+.main-connector {
+  height: 45px;
+  position: relative;
+  border-top: 2px solid #c9a44c;
+  width: 75%;
+  margin: 0 auto;
+  top: 22px;
+}
+
+.main-connector span {
+  position: absolute;
+  width: 2px;
+  height: 45px;
+  background: #c9a44c;
+  left: 50%;
+  top: -45px;
+}
+
+/* Four leadership offices */
+
+.leadership-branches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.leadership-branches > .office-card {
+  width: 100%;
+}
+
+.office-branch {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tree-level {
-  display: flex;
-  justify-content: center;
+.office-branch > .office-card {
   width: 100%;
-}
-
-.office-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 25px 30px;
-  text-align: center;
-  width: 230px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  position: relative;
-  z-index: 1;
-}
-
-.office-card h3 {
-  color: var(--primary);
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.office-card p {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.office-role {
-  display: block;
-  color: var(--secondary);
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.chairman-card {
-  background: var(--primary);
-  border: none;
-}
-
-.chairman-card h3,
-.chairman-card p {
-  color: var(--white);
-}
-
-.vice-card {
-  border-top: 4px solid var(--secondary);
-}
-
-.tree-connector {
-  width: 2px;
-  height: 40px;
-  background: var(--secondary);
 }
 
 .branch-connector {
-  width: 66.5%;
-  height: 30px;
-  border-top: 2px solid var(--secondary);
-  border-left: 2px solid var(--secondary);
-  border-right: 2px solid var(--secondary);
+  width: 2px;
+  height: 35px;
+  background: #c9a44c;
 }
 
-.tree-branches {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  width: 100%;
+.press-card {
+  border-top: 3px solid #c9a44c;
 }
 
-.tree-branches .office-card {
-  width: 100%;
+/* Legislative Arm */
+
+.legislative-card {
+  border: 2px solid #c9a44c;
+  position: relative;
+  cursor: pointer;
 }
 
-/* RESPONSIVENESS */
+.legislative-card:hover {
+  border-color: #102b46;
+}
 
-@media (max-width: 650px) {
-  .tree-branches {
+.office-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #b18b39;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Supporting sections */
+
+.supporting-offices {
+  position: relative;
+  margin-top: 100px;
+}
+
+/* Horizontal line from the SLG towards the panels */
+.supporting-offices::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 12.5%;
+  background: #c9a44c;
+  top: -35px;
+  left: 50%;
+}
+
+/* Vertical line descending from the SLG */
+.supporting-offices::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: #c9a44c;
+  top: -100px;
+  left: 62.5%;
+}
+
+.support-panel {
+  background: #fff;
+  border: 1px solid #d7dce2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.support-heading {
+  background: #102b46;
+  padding: 17px 22px;
+  text-align: center;
+}
+
+.support-heading h3 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.support-content {
+  padding: 25px;
+  min-height: 120px;
+}
+
+.support-connector {
+  width: 2px;
+  height: 40px;
+  background: #c9a44c;
+  margin: 0 auto;
+}
+
+/* Mobile */
+
+@media (max-width: 850px) {
+  .leadership-branches {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .main-connector {
+    width: 75%;
+  }
+
+  .supporting-offices::before,
+  .supporting-offices::after {
+    display: none;
+  }
+
+  .supporting-offices {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 520px) {
+  .office-section {
+    padding: 65px 15px;
+  }
+
+  .leadership-branches {
     grid-template-columns: 1fr;
-    gap: 20px;
+    max-width: 330px;
+    margin: 0 auto;
   }
 
-  .branch-connector {
+  .office-branch > .office-card,
+  .leadership-branches > .office-card {
+    max-width: 300px;
+  }
+
+  .main-connector {
     width: 2px;
-    height: 30px;
+    height: 35px;
     border: none;
-    background: var(--secondary);
+    background: #c9a44c;
+    top: 0;
   }
 
-  .tree-branches {
-    position: relative;
+  .main-connector span {
+    display: none;
   }
 
-  .office-card {
-    max-width: 280px;
+  .supporting-offices {
+    margin-top: 45px;
+  }
+
+  .support-heading h3 {
+    font-size: 14px;
   }
 }
 
