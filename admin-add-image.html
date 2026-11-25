@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Add Image | Chairman's Office</title>
+
+    <link rel="stylesheet" href="css/admin-add-image.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">CO</div>
+
+          <div>
+            <h2>Chairman's Office</h2>
+            <p>Administration</p>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin.html" class="nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="admin-news.html" class="nav-link">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>News & Articles</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-link active">
+            <i class="fa-regular fa-images"></i>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-achievements.html" class="nav-link">
+            <i class="fa-solid fa-award"></i>
+            <span>Achievements</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin-users.html" class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Administrators</span>
+          </a>
+
+          <a href="index.html" class="nav-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Website</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button class="logout-btn" type="button">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="topbar-label">MEDIA MANAGEMENT</p>
+            <h2>Add New Image</h2>
+          </div>
+
+          <div class="admin-profile">
+            <div class="profile-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-details">
+              <h4>Administrator</h4>
+              <p>Admin Account</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="add-image-section">
+          <!-- PAGE INTRO -->
+          <div class="page-intro">
+            <a href="admin-gallery.html" class="back-link">
+              <i class="fa-solid fa-arrow-left"></i>
+              Back to Gallery
+            </a>
+
+            <h1>Add New Photograph</h1>
+
+            <p>
+              Add photographs of official events and activities to the
+              Chairman's Office gallery.
+            </p>
+          </div>
+
+          <!-- IMAGE FORM -->
+          <form class="image-form" id="add-image-form">
+            <div class="form-panel">
+              <div class="panel-heading">
+                <h2>Image Information</h2>
+                <p>Provide the photograph and its details.</p>
+              </div>
+
+              <div class="form-body">
+                <!-- IMAGE UPLOAD -->
+                <div class="form-group">
+                  <label>Photograph <span>*</span></label>
+
+                  <label for="image-file" class="upload-area">
+                    <div class="upload-icon">
+                      <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+
+                    <h3>Click to upload photograph</h3>
+
+                    <p>Select an image from your device.</p>
+
+                    <span>JPEG, PNG or WEBP</span>
+                  </label>
+
+                  <input
+                    type="file"
+                    id="image-file"
+                    name="image"
+                    accept="image/jpeg,image/png,image/webp"
+                    required
+                    hidden
+                  />
+
+                  <div class="image-preview" id="image-preview" hidden>
+                    <img src="" alt="Selected photograph" />
+
+                    <button type="button" id="remove-image">
+                      <i class="fa-solid fa-xmark"></i>
+                      Remove image
+                    </button>
+                  </div>
+                </div>
+
+                <!-- IMAGE TITLE -->
+                <div class="form-group">
+                  <label for="image-title"> Image Title <span>*</span> </label>
+
+                  <input
+                    type="text"
+                    id="image-title"
+                    name="title"
+                    placeholder="e.g. Chairman at an official meeting"
+                    required
+                  />
+                </div>
+
+                <!-- CATEGORY -->
+                <div class="form-group">
+                  <label for="image-category"> Category <span>*</span> </label>
+
+                  <select id="image-category" name="category" required>
+                    <option value="">Select category</option>
+
+                    <option value="Official Events">Official Events</option>
+
+                    <option value="Meetings">Meetings</option>
+
+                    <option value="Community Activities">
+                      Community Activities
+                    </option>
+
+                    <option value="Projects">Projects</option>
+                  </select>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class="form-group">
+                  <label for="image-description"> Description </label>
+
+                  <textarea
+                    id="image-description"
+                    name="description"
+                    rows="5"
+                    placeholder="Provide a brief description of the photograph..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- PUBLISH PANEL -->
+            <aside class="publish-panel">
+              <div class="publish-heading">
+                <h2>Publication</h2>
+              </div>
+
+              <div class="publish-body">
+                <div class="publish-info">
+                  <i class="fa-regular fa-calendar"></i>
+
+                  <div>
+                    <h4>Date Added</h4>
+                    <p>The upload date will be recorded automatically.</p>
+                  </div>
+                </div>
+
+                <div class="publish-info">
+                  <i class="fa-solid fa-globe"></i>
+
+                  <div>
+                    <h4>Visibility</h4>
+                    <p>
+                      The photograph will appear in the public gallery after
+                      publishing.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="publish-divider"></div>
+
+                <button type="submit" class="publish-btn">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  Add to Gallery
+                </button>
+
+                <a href="admin-gallery.html" class="cancel-btn"> Cancel </a>
+              </div>
+            </aside>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="adminjs/admin-add-image.js"></script>
+  </body>
+</html>

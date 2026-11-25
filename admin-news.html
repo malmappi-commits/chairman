@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News & Articles | Chairman's Office</title>
+
+    <link rel="stylesheet" href="css/admin-news.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">CO</div>
+          <div>
+            <h2>Chairman's Office</h2>
+            <p>Administration</p>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin.html" class="nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="admin-news.html" class="nav-link active">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>News & Articles</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-link">
+            <i class="fa-regular fa-images"></i>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-achievements.html" class="nav-link">
+            <i class="fa-solid fa-award"></i>
+            <span>Achievements</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin-users.html" class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Administrators</span>
+          </a>
+
+          <a href="index.html" class="nav-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Website</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button class="logout-btn" type="button">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="topbar-label">CONTENT MANAGEMENT</p>
+            <h2>News & Articles</h2>
+          </div>
+
+          <div class="admin-profile">
+            <div class="profile-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-details">
+              <h4>Administrator</h4>
+              <p>Admin Account</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="news-management">
+          <!-- PAGE INTRO -->
+          <div class="page-intro">
+            <div>
+              <p class="section-label">PUBLICATIONS</p>
+              <h1>News & Articles</h1>
+              <p class="intro-text">
+                Create and manage official news, announcements and publications.
+              </p>
+            </div>
+
+            <a href="admin-create-news.html" class="primary-btn">
+              <i class="fa-solid fa-plus"></i>
+              Create New Article
+            </a>
+          </div>
+
+          <!-- ARTICLE SUMMARY -->
+          <div class="article-summary">
+            <div>
+              <span class="summary-title">Total Articles</span>
+              <h2 id="total-articles">--</h2>
+            </div>
+
+            <div class="summary-icon">
+              <i class="fa-regular fa-newspaper"></i>
+            </div>
+          </div>
+
+          <!-- ARTICLE MANAGEMENT PANEL -->
+          <div class="articles-panel">
+            <div class="panel-heading">
+              <div>
+                <h2>All Articles</h2>
+                <p>View and manage your publications</p>
+              </div>
+            </div>
+
+            <!-- SEARCH AND FILTER -->
+            <div class="article-controls">
+              <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                  type="search"
+                  id="article-search"
+                  placeholder="Search articles..."
+                />
+              </div>
+
+              <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="Announcements">Announcements</option>
+                <option value="Press Releases">Press Releases</option>
+                <option value="Activities">Activities</option>
+                <option value="Public Notices">Public Notices</option>
+              </select>
+            </div>
+
+            <!-- ARTICLES TABLE -->
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ARTICLE</th>
+                    <th>CATEGORY</th>
+                    <th>DATE</th>
+                    <th>ACTIONS</th>
+                  </tr>
+                </thead>
+
+                <tbody id="articles-table-body">
+                  <!-- Articles will be loaded here from the API -->
+
+                  <tr>
+                    <td colspan="4" class="empty-state">
+                      <i class="fa-regular fa-newspaper"></i>
+                      <h3>No articles to display</h3>
+                      <p>Articles will appear here when they are added.</p>
+
+                      <a href="admin-create-news.html" class="empty-create-btn">
+                        Create your first article
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- PAGINATION PLACEHOLDER -->
+            <div class="pagination">
+              <p>Showing articles</p>
+
+              <div>
+                <button type="button" disabled>
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button type="button" disabled>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

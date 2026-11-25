@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Article | Chairman's Office</title>
+
+    <link rel="stylesheet" href="css/admin-create-news.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">CO</div>
+          <div>
+            <h2>Chairman's Office</h2>
+            <p>Administration</p>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin.html" class="nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="admin-news.html" class="nav-link active">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>News & Articles</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-link">
+            <i class="fa-regular fa-images"></i>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-achievements.html" class="nav-link">
+            <i class="fa-solid fa-award"></i>
+            <span>Achievements</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin-users.html" class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Administrators</span>
+          </a>
+
+          <a href="index.html" class="nav-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Website</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button class="logout-btn" type="button">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="topbar-label">CONTENT MANAGEMENT</p>
+            <h2>Create New Article</h2>
+          </div>
+
+          <div class="admin-profile">
+            <div class="profile-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-details">
+              <h4>Administrator</h4>
+              <p>Admin Account</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="create-news-section">
+          <!-- PAGE INTRO -->
+          <div class="page-intro">
+            <div>
+              <a href="admin-news.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Articles
+              </a>
+
+              <h1>Create New Article</h1>
+
+              <p>
+                Prepare an official publication for the Chairman's Office
+                website.
+              </p>
+            </div>
+          </div>
+
+          <!-- ARTICLE FORM -->
+          <form class="article-form" id="create-article-form">
+            <div class="form-main">
+              <!-- ARTICLE DETAILS -->
+              <div class="form-panel">
+                <div class="panel-heading">
+                  <h2>Article Information</h2>
+                  <p>Enter the main details of your publication.</p>
+                </div>
+
+                <div class="form-body">
+                  <div class="form-group">
+                    <label for="article-title"
+                      >Article Title <span>*</span></label
+                    >
+
+                    <input
+                      type="text"
+                      id="article-title"
+                      name="title"
+                      placeholder="Enter article title"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="article-category"
+                      >Category <span>*</span></label
+                    >
+
+                    <select id="article-category" name="category" required>
+                      <option value="">Select a category</option>
+                      <option value="Announcements">Announcements</option>
+                      <option value="Press Releases">Press Releases</option>
+                      <option value="Activities">Activities</option>
+                      <option value="Public Notices">Public Notices</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="article-image"
+                      >Featured Image URL <span>*</span></label
+                    >
+
+                    <input
+                      type="url"
+                      id="article-image"
+                      name="image"
+                      placeholder="Paste image URL here"
+                      required
+                    />
+
+                    <small>
+                      Enter the URL of the image you want displayed with this
+                      article.
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="article-excerpt"
+                      >Article Excerpt <span>*</span></label
+                    >
+
+                    <textarea
+                      id="article-excerpt"
+                      name="excerpt"
+                      rows="3"
+                      placeholder="Write a short introduction to this article..."
+                      required
+                    ></textarea>
+
+                    <small>
+                      This short description will appear on the news listing
+                      page.
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="article-content"
+                      >Full Article Content <span>*</span></label
+                    >
+
+                    <textarea
+                      id="article-content"
+                      name="content"
+                      rows="14"
+                      placeholder="Write the full article here..."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PUBLISH PANEL -->
+            <aside class="publish-panel">
+              <div class="publish-heading">
+                <h2>Publication</h2>
+              </div>
+
+              <div class="publish-body">
+                <div class="publish-info">
+                  <i class="fa-regular fa-calendar"></i>
+
+                  <div>
+                    <h4>Publication Date</h4>
+                    <p>The current date will be assigned automatically.</p>
+                  </div>
+                </div>
+
+                <div class="publish-info">
+                  <i class="fa-solid fa-globe"></i>
+
+                  <div>
+                    <h4>Visibility</h4>
+                    <p>
+                      Your article will be available on the public website after
+                      publishing.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="publish-divider"></div>
+
+                <button type="submit" class="publish-btn">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  Publish Article
+                </button>
+
+                <a href="admin-news.html" class="cancel-btn"> Cancel </a>
+              </div>
+            </aside>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

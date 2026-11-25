@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Administrator | Chairman's Office</title>
+
+    <link rel="stylesheet" href="css/admin-add-user.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-icon">
+            <i class="fa-solid fa-landmark"></i>
+          </div>
+
+          <div>
+            <h2>Chairman's Office</h2>
+            <span>Administration</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <span class="nav-heading">MAIN MENU</span>
+
+          <a href="admin.html" class="nav-link">
+            <i class="fa-solid fa-border-all"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="admin-news.html" class="nav-link">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>News & Articles</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-link">
+            <i class="fa-regular fa-images"></i>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-achievements.html" class="nav-link">
+            <i class="fa-solid fa-award"></i>
+            <span>Achievements</span>
+          </a>
+
+          <a href="admin-users.html" class="nav-link active">
+            <i class="fa-solid fa-users-gear"></i>
+            <span>Administrators</span>
+          </a>
+
+          <span class="nav-heading other-heading">OTHER</span>
+
+          <a href="index.html" class="nav-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Website</span>
+          </a>
+
+          <a href="#" class="nav-link logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-avatar">AD</div>
+
+          <div class="admin-info">
+            <h4>Administrator</h4>
+            <span>Admin Account</span>
+          </div>
+
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb">
+            <span>Administration</span>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="admin-users.html">Administrators</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <strong>Add Administrator</strong>
+          </div>
+
+          <div class="topbar-right">
+            <button class="notification-btn">
+              <i class="fa-regular fa-bell"></i>
+              <span></span>
+            </button>
+
+            <div class="topbar-profile">
+              <div class="profile-avatar">AD</div>
+              <span>Administrator</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <section class="page-content">
+          <div class="page-heading">
+            <div>
+              <span class="page-eyebrow">ACCOUNT MANAGEMENT</span>
+              <h1>Add Administrator</h1>
+              <p>Create a new account with access to the admin dashboard.</p>
+            </div>
+
+            <a href="admin-users.html" class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+              Back to Administrators
+            </a>
+          </div>
+
+          <div class="form-layout">
+            <!-- FORM -->
+            <form class="user-form">
+              <!-- PERSONAL INFORMATION -->
+              <div class="form-section">
+                <div class="form-section-heading">
+                  <h2>Personal Information</h2>
+                  <p>Enter the administrator's basic details.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="admin-name"> Full Name <span>*</span> </label>
+
+                  <input
+                    type="text"
+                    id="admin-name"
+                    placeholder="Enter full name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="admin-email">
+                    Email Address <span>*</span>
+                  </label>
+
+                  <input
+                    type="email"
+                    id="admin-email"
+                    placeholder="Enter email address"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- ACCOUNT SECURITY -->
+              <div class="form-section">
+                <div class="form-section-heading">
+                  <h2>Account Security</h2>
+                  <p>Set the login credentials for this account.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="admin-password"> Password <span>*</span> </label>
+
+                  <input
+                    type="password"
+                    id="admin-password"
+                    placeholder="Create a password"
+                    required
+                  />
+
+                  <small>
+                    Use a strong password that is difficult to guess.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="confirm-password">
+                    Confirm Password <span>*</span>
+                  </label>
+
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="Confirm password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- ROLE AND STATUS -->
+              <div class="form-section">
+                <div class="form-section-heading">
+                  <h2>Account Permissions</h2>
+                  <p>Determine the access level of this administrator.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="admin-role">
+                    Administrator Role <span>*</span>
+                  </label>
+
+                  <select id="admin-role" required>
+                    <option value="">Select role</option>
+                    <option value="admin">Administrator</option>
+                    <option value="superadmin">Super Administrator</option>
+                  </select>
+
+                  <small>
+                    Super Administrators have additional account management
+                    privileges.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="account-status"> Account Status </label>
+
+                  <select id="account-status">
+                    <option value="true">Active</option>
+                    <option value="false">Inactive</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- FORM ACTIONS -->
+              <div class="form-actions">
+                <a href="admin-users.html" class="cancel-btn"> Cancel </a>
+
+                <button type="submit" class="save-btn">
+                  <i class="fa-solid fa-user-plus"></i>
+                  Create Administrator
+                </button>
+              </div>
+            </form>
+
+            <!-- INFORMATION SIDEBAR -->
+            <aside class="form-sidebar">
+              <div class="guidance-card">
+                <div class="guidance-icon">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>Administrator Roles</h3>
+
+                <p>There are two levels of administrator access.</p>
+
+                <div class="role-info">
+                  <h4>
+                    <i class="fa-solid fa-user"></i>
+                    Administrator
+                  </h4>
+
+                  <p>
+                    Can manage website content, including news, gallery images
+                    and achievements.
+                  </p>
+                </div>
+
+                <div class="role-info">
+                  <h4>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Super Administrator
+                  </h4>
+
+                  <p>
+                    Has full administrative privileges, including managing other
+                    administrator accounts.
+                  </p>
+                </div>
+              </div>
+
+              <div class="notice-card">
+                <i class="fa-solid fa-circle-info"></i>
+
+                <div>
+                  <h4>Important Security Notice</h4>
+
+                  <p>
+                    Only authorized super administrators should create or assign
+                    administrator accounts. Keep login credentials confidential.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

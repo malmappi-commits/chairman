@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gallery Management | Chairman's Office</title>
+
+    <link rel="stylesheet" href="css/admin-gallery.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">CO</div>
+
+          <div>
+            <h2>Chairman's Office</h2>
+            <p>Administration</p>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin.html" class="nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="admin-news.html" class="nav-link">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>News & Articles</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-link active">
+            <i class="fa-regular fa-images"></i>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-achievements.html" class="nav-link">
+            <i class="fa-solid fa-award"></i>
+            <span>Achievements</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin-users.html" class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Administrators</span>
+          </a>
+
+          <a href="index.html" class="nav-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Website</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button class="logout-btn" type="button">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="topbar-label">CONTENT MANAGEMENT</p>
+            <h2>Gallery</h2>
+          </div>
+
+          <div class="admin-profile">
+            <div class="profile-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-details">
+              <h4>Administrator</h4>
+              <p>Admin Account</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="gallery-management">
+          <!-- PAGE INTRO -->
+          <div class="page-intro">
+            <div>
+              <p class="section-label">MEDIA LIBRARY</p>
+
+              <h1>Photo Gallery</h1>
+
+              <p>
+                Manage photographs and visual records of official activities.
+              </p>
+            </div>
+
+            <a href="admin-add-image.html" class="primary-btn">
+              <i class="fa-solid fa-plus"></i>
+              Add New Image
+            </a>
+          </div>
+
+          <!-- GALLERY SUMMARY -->
+          <div class="gallery-summary">
+            <div>
+              <p>Total Images</p>
+              <h2 id="total-images">--</h2>
+            </div>
+
+            <div class="summary-icon">
+              <i class="fa-regular fa-images"></i>
+            </div>
+          </div>
+
+          <!-- GALLERY CONTENT -->
+          <div class="gallery-panel">
+            <div class="panel-header">
+              <div>
+                <h2>All Photographs</h2>
+                <p>Manage the images displayed on the website.</p>
+              </div>
+            </div>
+
+            <!-- SEARCH AND FILTER -->
+            <div class="gallery-controls">
+              <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                  type="search"
+                  id="gallery-search"
+                  placeholder="Search photographs..."
+                />
+              </div>
+
+              <select id="gallery-filter">
+                <option value="">All Events</option>
+                <option value="Official Events">Official Events</option>
+                <option value="Meetings">Meetings</option>
+                <option value="Community Activities">
+                  Community Activities
+                </option>
+                <option value="Projects">Projects</option>
+              </select>
+            </div>
+
+            <!-- IMAGE GRID -->
+            <div class="gallery-grid" id="gallery-grid">
+              <!-- SAMPLE IMAGE CARD -->
+
+              <article class="gallery-card">
+                <div class="image-wrapper">
+                  <img src="owsnm" alt="Official meeting" />
+
+                  <span class="image-category">Meetings</span>
+                </div>
+
+                <div class="image-details">
+                  <h3>Official Stakeholder Meeting</h3>
+
+                  <p>
+                    <i class="fa-regular fa-calendar"></i>
+                    20 November 2026
+                  </p>
+
+                  <div class="image-actions">
+                    <button type="button" class="edit-btn">
+                      <i class="fa-solid fa-pen"></i>
+                      Edit
+                    </button>
+
+                    <button type="button" class="delete-btn">
+                      <i class="fa-regular fa-trash-can"></i>
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gallery-card">
+                <div class="image-wrapper">
+                  <img src="ssss0" alt="Community gathering" />
+
+                  <span class="image-category">Community Activities</span>
+                </div>
+
+                <div class="image-details">
+                  <h3>Community Engagement</h3>
+
+                  <p>
+                    <i class="fa-regular fa-calendar"></i>
+                    15 November 2026
+                  </p>
+
+                  <div class="image-actions">
+                    <button type="button" class="edit-btn">
+                      <i class="fa-solid fa-pen"></i>
+                      Edit
+                    </button>
+
+                    <button type="button" class="delete-btn">
+                      <i class="fa-regular fa-trash-can"></i>
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gallery-card">
+                <div class="image-wrapper">
+                  <img src="https://images.unsp" alt="Development project" />
+
+                  <span class="image-category">Projects</span>
+                </div>
+
+                <div class="image-details">
+                  <h3>Development Project Inspection</h3>
+
+                  <p>
+                    <i class="fa-regular fa-calendar"></i>
+                    10 November 2026
+                  </p>
+
+                  <div class="image-actions">
+                    <button type="button" class="edit-btn">
+                      <i class="fa-solid fa-pen"></i>
+                      Edit
+                    </button>
+
+                    <button type="button" class="delete-btn">
+                      <i class="fa-regular fa-trash-can"></i>
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Replace these sample cards with API data later -->
+            </div>
+
+            <!-- EMPTY STATE -->
+            <div class="empty-gallery" hidden>
+              <i class="fa-regular fa-images"></i>
+
+              <h3>No photographs found</h3>
+
+              <p>Images added to the gallery will appear here.</p>
+
+              <a href="admin-add-image.html" class="empty-add-btn">
+                Add New Image
+              </a>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="gallery-pagination">
+              <p>Gallery photographs</p>
+
+              <div>
+                <button type="button" disabled>
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button type="button" disabled>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Chairman's Office</title>
+
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">CO</div>
+
+          <div>
+            <h2>Chairman's Office</h2>
+            <p>Administration</p>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin.html" class="nav-link active">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="admin-news.html" class="nav-link">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>News & Articles</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-link">
+            <i class="fa-regular fa-images"></i>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-achievements.html" class="nav-link">
+            <i class="fa-solid fa-award"></i>
+            <span>Achievements</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+          <a href="admin-users.html" class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Administrators</span>
+          </a>
+
+          <a href="index.html" class="nav-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Website</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button class="logout-btn" type="button">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- TOP BAR -->
+        <header class="topbar">
+          <div>
+            <p class="topbar-label">CHAIRMAN'S OFFICE</p>
+            <h2>Administration</h2>
+          </div>
+
+          <div class="admin-profile">
+            <div class="profile-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-details">
+              <h4>Administrator</h4>
+              <p>Admin Account</p>
+            </div>
+          </div>
+        </header>
+
+        <!-- DASHBOARD BODY -->
+        <section class="dashboard-body">
+          <div class="welcome-section">
+            <div>
+              <p class="welcome-label">OVERVIEW</p>
+              <h1>Welcome Back</h1>
+              <p class="welcome-text">
+                Manage news, gallery updates and official publications from your
+                dashboard.
+              </p>
+            </div>
+
+            <a href="admin-news.html" class="primary-btn">
+              <i class="fa-solid fa-plus"></i>
+              Create New Article
+            </a>
+          </div>
+
+          <!-- SUMMARY CARDS -->
+          <div class="summary-grid">
+            <div class="summary-card">
+              <div class="summary-top">
+                <div class="summary-icon news-icon">
+                  <i class="fa-regular fa-newspaper"></i>
+                </div>
+                <span class="summary-label">CONTENT</span>
+              </div>
+
+              <h2>--</h2>
+              <p>Total News Articles</p>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-top">
+                <div class="summary-icon gallery-icon">
+                  <i class="fa-regular fa-images"></i>
+                </div>
+                <span class="summary-label">MEDIA</span>
+              </div>
+
+              <h2>--</h2>
+              <p>Gallery Images</p>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-top">
+                <div class="summary-icon achievement-icon">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <span class="summary-label">RECORDS</span>
+              </div>
+
+              <h2>--</h2>
+              <p>Achievements</p>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-top">
+                <div class="summary-icon published-icon">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <span class="summary-label">PUBLICATIONS</span>
+              </div>
+
+              <h2>--</h2>
+              <p>Published Updates</p>
+            </div>
+          </div>
+
+          <!-- RECENT NEWS -->
+          <div class="content-panel">
+            <div class="panel-header">
+              <div>
+                <h2>Recent Articles</h2>
+                <p>Your latest news and publications</p>
+              </div>
+
+              <a href="admin-news.html" class="view-all">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ARTICLE TITLE</th>
+                    <th>CATEGORY</th>
+                    <th>DATE</th>
+                    <th>STATUS</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <!-- Sample row for layout preview -->
+                  <tr>
+                    <td colspan="4" class="empty-state">
+                      <i class="fa-regular fa-newspaper"></i>
+                      <p>Your recent articles will appear here.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- QUICK ACCESS -->
+          <div class="quick-access">
+            <h2>Quick Access</h2>
+
+            <div class="quick-access-grid">
+              <a href="admin-news.html" class="quick-card">
+                <div class="quick-icon">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+
+                <div>
+                  <h3>Manage News</h3>
+                  <p>Create and manage articles</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+              </a>
+
+              <a href="admin-gallery.html" class="quick-card">
+                <div class="quick-icon">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+
+                <div>
+                  <h3>Update Gallery</h3>
+                  <p>Add and manage photographs</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+              </a>
+
+              <a href="admin-achievements.html" class="quick-card">
+                <div class="quick-icon">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+
+                <div>
+                  <h3>Manage Achievements</h3>
+                  <p>Update official achievements</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

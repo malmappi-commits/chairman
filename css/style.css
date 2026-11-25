@@ -275,8 +275,14 @@
 .support-content {
   padding: 25px;
   min-height: 120px;
+  display: flex;
+  justify-content: space-between;
 }
 
+.support-content h3 {
+  color: #b18b39;
+  margin-bottom: 15px;
+}
 .support-connector {
   width: 2px;
   height: 40px;
@@ -669,6 +675,10 @@
   .heading-flex {
     align-items: flex-start;
     flex-direction: column;
+  }
+  .support-content {
+    flex-direction: column;
+    gap: 25px;
   }
 }
 

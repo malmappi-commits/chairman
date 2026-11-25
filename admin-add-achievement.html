@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Achievement | Chairman's Office</title>
+
+    <link rel="stylesheet" href="css/admin-add-achievement.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-icon">
+            <i class="fa-solid fa-landmark"></i>
+          </div>
+
+          <div>
+            <h2>Chairman's Office</h2>
+            <span>Administration</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <span class="nav-heading">MAIN MENU</span>
+
+          <a href="admin.html" class="nav-link">
+            <i class="fa-solid fa-border-all"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="admin-news.html" class="nav-link">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>News & Articles</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-link">
+            <i class="fa-regular fa-images"></i>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-achievements.html" class="nav-link active">
+            <i class="fa-solid fa-award"></i>
+            <span>Achievements</span>
+          </a>
+
+          <a href="admin-users.html" class="nav-link">
+            <i class="fa-solid fa-users-gear"></i>
+            <span>Administrators</span>
+          </a>
+
+          <span class="nav-heading other-heading">OTHER</span>
+
+          <a href="index.html" class="nav-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Website</span>
+          </a>
+
+          <a href="#" class="nav-link logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-avatar">AD</div>
+
+          <div class="admin-info">
+            <h4>Administrator</h4>
+            <span>Admin Account</span>
+          </div>
+
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb">
+            <span>Administration</span>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="admin-achievements.html">Achievements</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <strong>Add Achievement</strong>
+          </div>
+
+          <div class="topbar-right">
+            <button class="notification-btn">
+              <i class="fa-regular fa-bell"></i>
+              <span></span>
+            </button>
+
+            <div class="topbar-profile">
+              <div class="profile-avatar">AD</div>
+              <span>Administrator</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <section class="page-content">
+          <div class="page-heading">
+            <div>
+              <span class="page-eyebrow">ACHIEVEMENT MANAGEMENT</span>
+              <h1>Add Achievement</h1>
+              <p>Record a milestone, project or accomplishment.</p>
+            </div>
+
+            <a href="admin-achievements.html" class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+              Back to Achievements
+            </a>
+          </div>
+
+          <div class="form-layout">
+            <!-- FORM -->
+            <form class="achievement-form">
+              <div class="form-section">
+                <div class="form-section-heading">
+                  <h2>Achievement Details</h2>
+                  <p>Provide the main information about this achievement.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="achievement-title">
+                    Achievement Title <span>*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="achievement-title"
+                    placeholder="Enter achievement title"
+                    required
+                  />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="achievement-category">
+                      Category <span>*</span>
+                    </label>
+
+                    <select id="achievement-category" required>
+                      <option value="">Select category</option>
+                      <option>Infrastructure</option>
+                      <option>Education</option>
+                      <option>Healthcare</option>
+                      <option>Community Development</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="achievement-date"> Date <span>*</span> </label>
+
+                    <input type="date" id="achievement-date" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="achievement-description">
+                    Short Description <span>*</span>
+                  </label>
+
+                  <textarea
+                    id="achievement-description"
+                    rows="4"
+                    placeholder="Write a brief description of this achievement..."
+                    required
+                  ></textarea>
+
+                  <small>Keep the description clear and informative.</small>
+                </div>
+              </div>
+
+              <!-- IMAGE SECTION -->
+              <div class="form-section">
+                <div class="form-section-heading">
+                  <h2>Achievement Image</h2>
+                  <p>Add an image to accompany this achievement.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="achievement-image"> Image URL </label>
+
+                  <input
+                    type="url"
+                    id="achievement-image"
+                    placeholder="https://example.com/image.jpg"
+                  />
+
+                  <small> Provide a publicly accessible image URL. </small>
+                </div>
+              </div>
+
+              <!-- PUBLISHING -->
+              <div class="form-section">
+                <div class="form-section-heading">
+                  <h2>Publishing</h2>
+                  <p>Choose how this achievement should appear.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="achievement-status"> Publication Status </label>
+
+                  <select id="achievement-status">
+                    <option value="draft">Save as Draft</option>
+                    <option value="published">Publish Immediately</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- ACTIONS -->
+              <div class="form-actions">
+                <a href="admin-achievements.html" class="cancel-btn">
+                  Cancel
+                </a>
+
+                <button type="submit" class="save-btn">
+                  <i class="fa-solid fa-check"></i>
+                  Save Achievement
+                </button>
+              </div>
+            </form>
+
+            <!-- SIDE NOTE -->
+            <aside class="form-sidebar">
+              <div class="guidance-card">
+                <div class="guidance-icon">
+                  <i class="fa-regular fa-lightbulb"></i>
+                </div>
+
+                <h3>Content Guidelines</h3>
+
+                <p>
+                  Keep achievement records factual, clear and easy for visitors
+                  to understand.
+                </p>
+
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Use a descriptive title.
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Include the correct date.
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Provide a clear description.
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Use relevant images where available.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="notice-card">
+                <i class="fa-solid fa-circle-info"></i>
+
+                <div>
+                  <h4>Before Publishing</h4>
+                  <p>
+                    Ensure all information has been reviewed and verified before
+                    making it public.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
